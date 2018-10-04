@@ -1,2 +1,2 @@
 n = gets.split('-')
-puts n.map(&->(x) { x[0] }).join
+puts n.map(&:chr).join

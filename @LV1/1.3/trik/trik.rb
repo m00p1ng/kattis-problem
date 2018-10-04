@@ -1,8 +1,10 @@
-a, b, c = 1, 0, 0
+a = 1
+b = 0
+c = 0
 
 s = gets.chomp
 
-s.each_char do |act| 
+s.each_char do |act|
   if act == 'A'
     a, b = b, a
   elsif act == 'B'

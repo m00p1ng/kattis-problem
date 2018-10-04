@@ -7,9 +7,7 @@ cnt = 0
 
 line.each_char do |ch|
   if ch == '<'
-    if cnt > 0
-      cnt -= 1
-    end
+    cnt -= 1 if cnt > 0
   else
     out[cnt] = ch
     cnt += 1

@@ -6,8 +6,6 @@ if b < 0
   a -= 1
 end
 
-if a < 0
-  a = 23
-end
+a = 23 if a < 0
 
 puts "#{a} #{b}"

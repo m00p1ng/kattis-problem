@@ -1,6 +1,6 @@
 loop do
   a, b = gets.split.map(&:to_i)
-  break if a == 0 && b == 0
+  break if a.zero? && b.zero?
 
   puts "#{a/b} #{a%b} / #{b}"
 end

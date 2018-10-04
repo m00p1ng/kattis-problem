@@ -1,11 +1,11 @@
 def fizzbuzz(n, x, y)
-  mx = n % x == 0
-  my = n % y == 0
+  mx = (n % x).zero?
+  my = (n % y).zero?
 
   case
-    when (mx and my) then "FizzBuzz"
-    when mx then "Fizz"
-    when my then "Buzz"
+    when (mx && my) then 'FizzBuzz'
+    when mx then 'Fizz'
+    when my then 'Buzz'
     else n
   end
 end

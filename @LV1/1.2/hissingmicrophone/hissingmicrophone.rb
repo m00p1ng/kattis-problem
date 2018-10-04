@@ -1,3 +1,3 @@
 s = gets.chomp
 
-puts s[/ss/] ? "hiss" : "no hiss"
+puts s[/ss/] ? 'hiss' : 'no hiss'
