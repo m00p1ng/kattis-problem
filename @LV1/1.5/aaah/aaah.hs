@@ -1,8 +1,5 @@
+main :: IO ()
 main = do
-    a <- getLine
-    b <- getLine
-    if length a < length b
-        then
-            putStrLn "no"
-        else
-            putStrLn "go"
+  a <- getLine
+  b <- getLine
+  putStrLn $ if length a < length b then "no" else "go"

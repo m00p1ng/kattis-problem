@@ -1,3 +1,4 @@
+main :: IO ()
 main = do
-    getLine
-    interact (unlines . map (show . length) . lines)
+  _ <- getLine
+  interact (unlines . map (show . length) . lines)

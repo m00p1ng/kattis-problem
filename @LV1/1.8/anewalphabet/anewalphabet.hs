@@ -1,35 +1,34 @@
-import Data.Char
+import           Data.Char
 
 dict :: Char -> String
-dict 'a' = "@"
-dict 'b' = "8"
-dict 'c' = "("
-dict 'd' = "|)"
-dict 'e' = "3"
-dict 'f' = "#"
-dict 'g' = "6"
-dict 'h' = "[-]"
-dict 'i' = "|"
-dict 'j' = "_|"
-dict 'k' = "|<"
-dict 'l' = "1"
-dict 'm' = "[]\\/[]"
-dict 'n' = "[]\\[]"
-dict 'o' = "0"
-dict 'p' = "|D"
-dict 'q' = "(,)"
-dict 'r' = "|Z"
-dict 's' = "$"
-dict 't' = "']['"
-dict 'u' = "|_|"
-dict 'v' = "\\/"
-dict 'w' = "\\/\\/"
-dict 'x' = "}{"
-dict 'y' = "`/"
-dict 'z' = "2"
-dict x = [x]
+dict x = case x of
+  'a' -> "@"
+  'b' -> "8"
+  'c' -> "("
+  'd' -> "|)"
+  'e' -> "3"
+  'f' -> "#"
+  'g' -> "6"
+  'h' -> "[-]"
+  'i' -> "|"
+  'j' -> "_|"
+  'k' -> "|<"
+  'l' -> "1"
+  'm' -> "[]\\/[]"
+  'n' -> "[]\\[]"
+  'o' -> "0"
+  'p' -> "|D"
+  'q' -> "(,)"
+  'r' -> "|Z"
+  's' -> "$"
+  't' -> "']['"
+  'u' -> "|_|"
+  'v' -> "\\/"
+  'w' -> "\\/\\/"
+  'x' -> "}{"
+  'y' -> "`/"
+  'z' -> "2"
+  _   -> [x]
 
-main = do
-    s <- getLine
-    let ans = map (dict . toLower) s
-    putStrLn $ concat ans
+main :: IO ()
+main = interact $ concatMap (dict . toLower)

@@ -1,5 +1,6 @@
+main :: IO ()
 main = do
-    n <- getLine
-    inp <- getLine
-    let cold = filter (<0) $ map (read::String->Int) $ words inp
-    print $ length cold
+  _   <- getLine
+  inp <- map read . words <$> getLine
+  let cold = filter (< 0) inp
+  print $ length cold

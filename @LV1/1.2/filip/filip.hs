@@ -1,4 +1,4 @@
+main :: IO ()
 main = do
-    s <- getLine
-    let [a, b] = map (read::String->Int) $ (words . reverse) s
-    print $ max a b
+  [a, b] <- map (read :: String -> Int) . words . reverse <$> getLine
+  print $ max a b

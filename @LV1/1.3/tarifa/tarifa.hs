@@ -1,7 +1,8 @@
+solve :: Int -> Int -> [Int] -> Int
 solve x n arr = (-) (n * x + x) $ sum arr
-readInput = (map read) . words
 
+main :: IO ()
 main = do
-    x <- readLn :: IO Int
-    n <- readLn :: IO Int
-    interact (show . (solve x n) . readInput)
+  x <- readLn
+  n <- readLn
+  interact (show . solve x n . map read . words)

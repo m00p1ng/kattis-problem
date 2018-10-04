@@ -1,4 +1,5 @@
+main :: IO ()
 main = do
-    inp <- getLine
-    let [_, out] = words inp
-    putStrLn out
+  inp <- getLine
+  let [_, out] = words inp
+  putStrLn out

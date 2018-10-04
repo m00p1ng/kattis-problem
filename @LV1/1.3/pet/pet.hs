@@ -1,16 +1,14 @@
-import Control.Monad
-import Data.List
+import           Control.Monad
+import           Data.List
 
-readList' :: [String] -> [Int]
-readList' x = map read x
-
+main :: IO ()
 main = do
-    lines <- replicateM 5 $ fmap words getLine
-    let score = map (sum . readList') lines
-        maxVal = maximum score
-        idx = case maxIdx of
-            Just a -> a + 1
-            Nothing -> -1
-            where maxIdx = elemIndex maxVal score
+  line <- replicateM 5 $ map read . words <$> getLine
+  let score  = map sum line
+      maxVal = maximum score
+      idx    = case maxIdx of
+        Just a  -> a + 1
+        Nothing -> -1
+        where maxIdx = elemIndex maxVal score
 
-    putStrLn $ (show idx) ++ " " ++ (show maxVal)
+  putStrLn $ show idx ++ " " ++ show maxVal

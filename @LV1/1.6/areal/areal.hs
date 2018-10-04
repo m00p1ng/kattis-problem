@@ -1,3 +1,2 @@
-main = do
-    area <- readLn
-    print $ 4 * sqrt area
+main :: IO ()
+main = interact (show . (* 4) . sqrt . read)
