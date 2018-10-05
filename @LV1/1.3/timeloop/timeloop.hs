@@ -1,5 +1,5 @@
 concat' :: Int -> String
-concat' x = (show x) ++ " Abracadabra"
+concat' x = show x ++ " Abracadabra"
 
 main :: IO ()
 main = do

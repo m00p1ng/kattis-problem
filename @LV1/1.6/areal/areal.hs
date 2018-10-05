@@ -1,2 +1,2 @@
 main :: IO ()
-main = interact (show . (* 4) . sqrt . read)
+main = interact $ show . (* 4) . sqrt . read

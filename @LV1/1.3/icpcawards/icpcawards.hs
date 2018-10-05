@@ -1,4 +1,4 @@
-import qualified Data.Set                      as Set
+import qualified Data.Set as Set
 
 solve :: Set.Set String -> [String] -> Int -> IO [String]
 solve _  l 0 = pure $ take 12 l

@@ -1,13 +1,13 @@
-import           Control.Monad
-import           Data.List
-import           Data.Ord
+import Control.Monad
+import Data.List
+import Data.Ord
 
 sumT :: Int -> [Int] -> Int
 sumT t x = case x of
-  []               -> t
-  [a]              -> t + a
-  [a, b]           -> t + a + b
-  (a : b : _ : bs) -> sumT (t + a + b) bs
+  []         -> t
+  [a]        -> t + a
+  [a, b]     -> t + a + b
+  (a:b:_:bs) -> sumT (t + a + b) bs
 
 main :: IO ()
 main = do

@@ -1,4 +1,4 @@
-import           Data.Char
+import Data.Char
 
 dict :: Char -> String
 dict x = case x of

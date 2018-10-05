@@ -1,4 +1,4 @@
-import           Control.Monad
+import Control.Monad
 
 makePair :: IO Int
 makePair = do

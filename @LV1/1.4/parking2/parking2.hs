@@ -1,4 +1,4 @@
-import           Control.Monad
+import Control.Monad
 
 main :: IO ()
 main = do
@@ -7,4 +7,4 @@ main = do
   replicateM_ n $ do
     _    <- getLine
     park <- fmap (map read . words) getLine
-    print . (2 *) $ (-) (maximum park) (minimum park)
+    print . (2 *) $ maximum park - minimum park
