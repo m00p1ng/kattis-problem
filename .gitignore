@@ -5,3 +5,5 @@ test.txt
 
 !/.gitignore
 !/README.md
+
+!move*
