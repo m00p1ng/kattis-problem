@@ -1,0 +1,16 @@
+use std::io;
+
+fn main() {
+    let stdin = io::stdin();
+
+    let mut buff = String::new();
+    stdin.read_line(&mut buff).unwrap();
+
+    let n: i32 = buff.trim().parse().unwrap();
+
+    if n % 2 == 1 {
+        println!("Alice");
+    } else {
+        println!("Bob");
+    }
+}
